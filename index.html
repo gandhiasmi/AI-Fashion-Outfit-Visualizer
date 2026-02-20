@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Fashion Outfit Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<h1>AI Virtual Try-On</h1>
+
+<input type="file" id="upload" accept="image/*">
+
+<div class="controls">
+    <label>Resize Outfit:</label>
+    <input type="range" id="resize" min="100" max="400" value="200">
+</div>
+
+<div class="preview-container" id="previewContainer">
+    <img id="userImage">
+    <img id="outfitImage">
+</div>
+
+<h3>Select Outfit</h3>
+<div class="outfit-gallery">
+    <img src="Outfits/reddress.png" onclick="selectOutfit(this)" data-color="red">
+    <img src="Outfits/bluetop.png" onclick="selectOutfit(this)" data-color="blue">
+    <img src="Outfits/whitepants.png" onclick="selectOutfit(this)" data-color="black">
+</div>
+
+
+
+<h3 id="suggestion"></h3>
+
+<script src="script.js"></script>
+</body>
+</html>
